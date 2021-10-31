@@ -1,15 +1,15 @@
 Package: dbi3
-Title: What the Package Does (One Line, Title Case)
+Title: DBI revisited
 Version: 0.0.0.9000
 Date: 2021-10-31
 Authors@R: 
     person("Kirill", "Müller", , "krlmlr+r@mailbox.org", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-1416-3412"))
-Description: What the package does (one paragraph).
-License: GPL-3
-URL: https://github.com/krlmlr/proposal, https://krlmlr.github.io/proposal
-BugReports: https://github.com/krlmlr/proposal/issues
+Description: A reimplementation of a generic database interface for R:
+    easier to extend, more responsibilities, solving long-standing issues.
+License: MIT
+URL: https://github.com/r-dbi/dbi3/, https://dbi3.r-dbi.org/
+BugReports: https://github.com/r-dbi/dbi3/
 Encoding: UTF-8
-LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
