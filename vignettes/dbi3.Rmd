@@ -43,41 +43,51 @@ knitr::opts_chunk$set(
 
 ## Using Arrow/Parquet as an exchange format
 
-- between dbplyr and DBI
-    - effort: hours/days
-    - duplication: for each target language
-    - performance: bad
-    - supported data types: R
-    - impact: low, only R + dbplyr workflows
-    - adoption: moderate
-- between DBI and odbc
-    - effort: days
-    - duplication: for each target language
-    - performance: moderate
-    - supported data types: ODBC
-    - impact: moderate, only R, only ODBC connections
-    - adoption: moderate
-- between odbc and nanodbc
-    - effort: days/weeks
-    - duplication: for each target language
-    - performance: moderate
-    - supported data types: ODBC
-    - impact: moderate, R and other systems using nanodbc, only ODBC connections
-    - adoption: moderate
-- between DBI and database client library
-    - effort: months
-    - duplication: for each target language *and* for each database client
-    - performance: good
-    - supported data types: Arrow
-    - impact: high
-    - adoption: slow
-- between database client library an database server
-    - effort: months
-    - duplication: for each database
-    - performance: best
-    - supported data types: Arrow
-    - impact: high
-    - adoption: very slow
+### Between dbplyr and DBI
+
+- effort: hours/days
+- duplication: for each target language
+- performance: bad
+- supported data types: R
+- impact: low, only R + dbplyr workflows
+- adoption: moderate
+
+
+### Between DBI and odbc
+
+- effort: days
+- duplication: for each target language
+- performance: moderate
+- supported data types: ODBC
+- impact: moderate, only R, only ODBC connections
+- adoption: moderate
+
+### Between odbc and nanodbc
+
+- effort: days/weeks
+- duplication: for each target language
+- performance: moderate
+- supported data types: ODBC
+- impact: moderate, R and other systems using nanodbc, only ODBC connections
+- adoption: moderate
+
+### Between DBI and database client library
+
+- effort: months
+- duplication: for each target language *and* for each database client
+- performance: good
+- supported data types: Arrow
+- impact: high
+- adoption: slow
+
+### Between database client library an database server
+
+- effort: months
+- duplication: for each database
+- performance: best
+- supported data types: Arrow
+- impact: high
+- adoption: very slow
 
 ## Alternative: a new odbc?
 
