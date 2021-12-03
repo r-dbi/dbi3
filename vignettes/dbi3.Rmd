@@ -14,6 +14,83 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(dbi3)
-```
+## Layers when connecting to a database
+
+### R
+
+- dbplyr
+- DBI
+- (odbc + nanodbc)
+- database client library
+- (network)
+- database server
+
+### Python
+
+- DBI???
+- (ODBC)
+- database client library
+- network
+- database server
+
+### Julia
+
+- DBInterface.jl
+- (ODBC?)
+- database client library
+- network
+- database server
+
+## Using Arrow/Parquet as an exchange format
+
+- between dbplyr and DBI
+    - effort: hours/days
+    - duplication: for each target language
+    - performance: bad
+    - supported data types: R
+    - impact: low, only R + dbplyr workflows
+    - adoption: moderate
+- between DBI and odbc
+    - effort: days
+    - duplication: for each target language
+    - performance: moderate
+    - supported data types: ODBC
+    - impact: moderate, only R, only ODBC connections
+    - adoption: moderate
+- between odbc and nanodbc
+    - effort: days/weeks
+    - duplication: for each target language
+    - performance: moderate
+    - supported data types: ODBC
+    - impact: moderate, R and other systems using nanodbc, only ODBC connections
+    - adoption: moderate
+- between DBI and database client library
+    - effort: months
+    - duplication: for each target language *and* for each database client
+    - performance: good
+    - supported data types: Arrow
+    - impact: high
+    - adoption: slow
+- between database client library an database server
+    - effort: months
+    - duplication: for each database
+    - performance: best
+    - supported data types: Arrow
+    - impact: high
+    - adoption: very slow
+
+## Alternative: a new odbc?
+
+<https://www.dremio.com/is-time-to-replace-odbc-jdbc>
+
+- between database client library/ODBC and DBI/DBInterfaces.jl/...
+- a language-agnostic framework for connecting to databases
+- C/C++ interface for a subset of R's DBI, designed from experience with DBI
+- Instructions for adaptation to database libraries (libpq, libmariadb, nanodbc, ...)
+    - Also covers ODBC
+- effort: months
+- duplication: none
+- performance: good
+- supported data types: Arrow
+- impact: high
+- adoption: moderate
