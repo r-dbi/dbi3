@@ -8,7 +8,9 @@ Authors@R:
 Description: A reimplementation of a generic database interface for R:
     easier to extend, more responsibilities, solving long-standing issues.
 License: MIT
-URL: https://github.com/r-dbi/dbi3/, https://dbi3.r-dbi.org/
+URL: https://github.com/r-dbi/dbi3/,
+    https://dbi3.r-dbi.org/,
+    https://r-dbi.github.io/dbi3
 BugReports: https://github.com/r-dbi/dbi3/
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
