@@ -76,13 +76,128 @@
 
     
     
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-dbi/dbi3/" class="external-link">dbi3</a></span><span class="op">)</span></code></pre></div>
+<div class="section level2">
+<h2 id="layers-when-connecting-to-a-database">Layers when connecting to a database<a class="anchor" aria-label="anchor" href="#layers-when-connecting-to-a-database"></a>
+</h2>
+<div class="section level3">
+<h3 id="r">R<a class="anchor" aria-label="anchor" href="#r"></a>
+</h3>
+<ul>
+<li>dbplyr</li>
+<li>DBI</li>
+<li>(odbc + nanodbc)</li>
+<li>database client library</li>
+<li>(network)</li>
+<li>database server</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="python">Python<a class="anchor" aria-label="anchor" href="#python"></a>
+</h3>
+<ul>
+<li>DBI???</li>
+<li>(ODBC)</li>
+<li>database client library</li>
+<li>network</li>
+<li>database server</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="julia">Julia<a class="anchor" aria-label="anchor" href="#julia"></a>
+</h3>
+<ul>
+<li>DBInterface.jl</li>
+<li>(ODBC?)</li>
+<li>database client library</li>
+<li>network</li>
+<li>database server</li>
+</ul>
+</div>
+</div>
+<div class="section level2">
+<h2 id="using-arrowparquet-as-an-exchange-format">Using Arrow/Parquet as an exchange format<a class="anchor" aria-label="anchor" href="#using-arrowparquet-as-an-exchange-format"></a>
+</h2>
+<ul>
+<li>between dbplyr and DBI
+<ul>
+<li>effort: hours/days</li>
+<li>duplication: for each target language</li>
+<li>performance: bad</li>
+<li>supported data types: R</li>
+<li>impact: low, only R + dbplyr workflows</li>
+<li>adoption: moderate</li>
+</ul>
+</li>
+<li>between DBI and odbc
+<ul>
+<li>effort: days</li>
+<li>duplication: for each target language</li>
+<li>performance: moderate</li>
+<li>supported data types: ODBC</li>
+<li>impact: moderate, only R, only ODBC connections</li>
+<li>adoption: moderate</li>
+</ul>
+</li>
+<li>between odbc and nanodbc
+<ul>
+<li>effort: days/weeks</li>
+<li>duplication: for each target language</li>
+<li>performance: moderate</li>
+<li>supported data types: ODBC</li>
+<li>impact: moderate, R and other systems using nanodbc, only ODBC connections</li>
+<li>adoption: moderate</li>
+</ul>
+</li>
+<li>between DBI and database client library
+<ul>
+<li>effort: months</li>
+<li>duplication: for each target language <em>and</em> for each database client</li>
+<li>performance: good</li>
+<li>supported data types: Arrow</li>
+<li>impact: high</li>
+<li>adoption: slow</li>
+</ul>
+</li>
+<li>between database client library an database server
+<ul>
+<li>effort: months</li>
+<li>duplication: for each database</li>
+<li>performance: best</li>
+<li>supported data types: Arrow</li>
+<li>impact: high</li>
+<li>adoption: very slow</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="alternative-a-new-odbc">Alternative: a new odbc?<a class="anchor" aria-label="anchor" href="#alternative-a-new-odbc"></a>
+</h2>
+<p><a href="https://www.dremio.com/is-time-to-replace-odbc-jdbc" class="external-link uri">https://www.dremio.com/is-time-to-replace-odbc-jdbc</a></p>
+<ul>
+<li>between database client library/ODBC and DBI/DBInterfaces.jl/…</li>
+<li>a language-agnostic framework for connecting to databases</li>
+<li>C/C++ interface for a subset of R’s DBI, designed from experience with DBI</li>
+<li>Instructions for adaptation to database libraries (libpq, libmariadb, nanodbc, …)
+<ul>
+<li>Also covers ODBC</li>
+</ul>
+</li>
+<li>effort: months</li>
+<li>duplication: none</li>
+<li>performance: good</li>
+<li>supported data types: Arrow</li>
+<li>impact: high</li>
+<li>adoption: moderate</li>
+</ul>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-      </div>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
+</div>
 
 </div>
 
