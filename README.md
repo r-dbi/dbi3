@@ -16,4 +16,10 @@ Eventually, the repository will contain a working package and a design document.
 ## Properties
 
 - async-first
+    - required for efficient web applications: Shiny and Plumber
+    - simpler to implement a synchronous interface from an async interface than the other way round
 - only pure functions/methods with callbacks
+    - idiomatic to R
+- agnostic to query language
+    - concepts: context, connection, query objects, tables, query strings, parameters
+- reference implementation: generic backend for DBI classic
