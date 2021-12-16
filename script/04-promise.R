@@ -11,7 +11,7 @@ dbi_capabilities(conn, "dbi_promises")
 
 promises::then(stmt1,
   function(tbl) {
-    as.data.frame(tbl)$a
+    print(as.data.frame(tbl)$a)
   }
 )
 #> [1] 42
