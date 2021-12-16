@@ -77,8 +77,23 @@
 <h2 id="properties">Properties<a class="anchor" aria-label="anchor" href="#properties"></a>
 </h2>
 <ul>
-<li>async-first</li>
-<li>only pure functions/methods with callbacks</li>
+<li>async-first
+<ul>
+<li>required for efficient web applications: Shiny and Plumber</li>
+<li>simpler to implement a synchronous interface from an async interface than the other way round</li>
+</ul>
+</li>
+<li>only pure functions/methods with callbacks
+<ul>
+<li>idiomatic to R</li>
+</ul>
+</li>
+<li>agnostic to query language
+<ul>
+<li>concepts: context, connection, query objects, tables, query strings, parameters</li>
+</ul>
+</li>
+<li>reference implementation: generic backend for DBI classic</li>
 </ul>
 </div>
 </div>
