@@ -3,7 +3,7 @@ pkgdown: 2.0.1
 pkgdown_sha: ~
 articles:
   dbi3: dbi3.html
-last_built: 2021-12-16T09:36Z
+last_built: 2021-12-16T11:02Z
 urls:
   reference: https://r-dbi.github.io/dbi3/reference
   article: https://r-dbi.github.io/dbi3/articles
