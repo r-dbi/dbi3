@@ -12,3 +12,8 @@ Backends for the new interface will be easier to implement, because they can use
 
 In the beginning, the issue tracker will be used to collect and categorize issues that did not fit the scope of {DBI} or related packages.
 Eventually, the repository will contain a working package and a design document.
+
+## Properties
+
+- async-first
+- only pure functions/methods with callbacks
