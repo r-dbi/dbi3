@@ -14,6 +14,8 @@ dbi_capabilities(conn, "bind_placeholder")
 #> [1] "?"
 
 qry <- dbi_query(conn, "SELECT ?", params_schema = list(integer()))
+# qry <- dbi_query(conn, "SELECT ?", params_schema = list(arrow::decimal(19,4)))
+# qry <- dbi_query(conn, "SELECT ?", params_schema = list(sql("DECIMAL(19, 4)")))
 dbi_tbl(qry)
 #> Error: not bound
 
