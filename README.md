@@ -44,8 +44,6 @@ The following list of issues, collected 2024-04-14, were categorized by how (and
 
 - [Add default dbWriteTable() method](https://github.com/r-dbi/dbi3/issues/51)
 
-- [Progress bar for dbWriteTable?](https://github.com/r-dbi/dbi3/issues/16)
-
 ### To be solved by ADBC/Arrow: Usability
 
 - [Think about asynchronous operations](https://github.com/r-dbi/dbi3/issues/19)
@@ -70,6 +68,16 @@ The following list of issues, collected 2024-04-14, were categorized by how (and
 
 - [Support arrays natively](https://github.com/r-dbi/dbi3/issues/44)
 
+### Interface: wrapper around adbcdrivermanager?
+
+- [Progress bar for dbWriteTable?](https://github.com/r-dbi/dbi3/issues/16)
+
+- [dbWithConnection() and dbWithResult()](https://github.com/r-dbi/dbi3/issues/24)
+
+- [Specify n argument for dbReadTable()](https://github.com/r-dbi/dbi3/issues/25)
+
+- [Default connection](https://github.com/r-dbi/dbi3/issues/57)
+
 ### Quoting: dbplyr?
 
 - [`dbQuoteIdentifier` should validate SQL inputs](https://github.com/r-dbi/dbi3/issues/55)
@@ -91,14 +99,6 @@ The following list of issues, collected 2024-04-14, were categorized by how (and
 - [How to create an external table in Hive?](https://github.com/r-dbi/dbi3/issues/53)
 
 - [Name collision when creating tables](https://github.com/r-dbi/dbi3/issues/41)
-
-### Interface: wrapper around adbcdrivermanager?
-
-- [dbWithConnection() and dbWithResult()](https://github.com/r-dbi/dbi3/issues/24)
-
-- [Specify n argument for dbReadTable()](https://github.com/r-dbi/dbi3/issues/25)
-
-- [Default connection](https://github.com/r-dbi/dbi3/issues/57)
 
 ### Introspection: dm?
 
