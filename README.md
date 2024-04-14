@@ -106,7 +106,7 @@ The following list of issues, collected 2024-04-14, were categorized by how (and
 
 - [Think about listing temporary tables](https://github.com/r-dbi/dbi3/issues/12)
 
-## Interface: maintenance
+### Interface: maintenance
 
 - [Use ellipsis::check_dots_used() in dbConnect](https://github.com/r-dbi/dbi3/issues/5)
 
