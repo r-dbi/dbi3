@@ -36,22 +36,6 @@ The following list of issues, collected 2024-04-14, were categorized by how (and
 
 - [let dbreadtable use copy ](https://github.com/r-dbi/dbi3/issues/9)
 
-### Solved by ADBC: Usability
-
-- [Rethink `immediate` argument](https://github.com/r-dbi/dbi3/issues/47)
-
-- [Streaming multiple statements in a single dbExecute/dbQuery/etc. call](https://github.com/r-dbi/dbi3/issues/56)
-
-- [Add default dbWriteTable() method](https://github.com/r-dbi/dbi3/issues/51)
-
-### To be solved by ADBC/Arrow: Usability
-
-- [Think about asynchronous operations](https://github.com/r-dbi/dbi3/issues/19)
-
-- [Implement RStudio Connection Contract](https://github.com/r-dbi/dbi3/issues/11)
-
-- [dbGetChunkedQuery()](https://github.com/r-dbi/dbi3/issues/23)
-
 ### Solved by ADBC: Data format
 
 - [Send parameter types](https://github.com/r-dbi/dbi3/issues/2)
@@ -67,6 +51,22 @@ The following list of issues, collected 2024-04-14, were categorized by how (and
 - [Think about column conversion](https://github.com/r-dbi/dbi3/issues/17)
 
 - [Support arrays natively](https://github.com/r-dbi/dbi3/issues/44)
+
+### Solved by ADBC: Usability
+
+- [Rethink `immediate` argument](https://github.com/r-dbi/dbi3/issues/47)
+
+- [Streaming multiple statements in a single dbExecute/dbQuery/etc. call](https://github.com/r-dbi/dbi3/issues/56)
+
+- [Add default dbWriteTable() method](https://github.com/r-dbi/dbi3/issues/51)
+
+### To be solved by ADBC/Arrow: Usability
+
+- [Think about asynchronous operations](https://github.com/r-dbi/dbi3/issues/19)
+
+- [Implement RStudio Connection Contract](https://github.com/r-dbi/dbi3/issues/11)
+
+- [dbGetChunkedQuery()](https://github.com/r-dbi/dbi3/issues/23)
 
 ### Interface: wrapper around adbcdrivermanager?
 
