@@ -3,7 +3,7 @@ Title: DBI revisited
 Version: 0.0.0.9000
 Date: 2021-10-31
 Authors@R: 
-    person("Kirill", "Müller", , "krlmlr+r@mailbox.org", role = c("aut", "cre"),
+    person("Kirill", "Müller", , "kirill@cynkra.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-1416-3412"))
 Description: A reimplementation of a generic database interface for R:
     easier to extend, more responsibilities, solving long-standing issues.
