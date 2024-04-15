@@ -4,6 +4,8 @@ on:
   push:
     branches: [main, master]
     tags: ['*']
+  pull_request:
+    branches: [main, master]
 
 name: pkgdown
 
@@ -12,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      isExtPR: ${{ github.event.pull_request.head.repo.fork == true }}
     steps:
       - uses: actions/checkout@v4
 
@@ -26,8 +29,14 @@ jobs:
           extra-packages: pkgdown
           needs: website
 
-      - name: Deploy package
+      - name: Deploy pkgdown website
+        if: contains(env.isExtPR, 'false')
         run: |
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
           Rscript -e 'pkgdown::deploy_to_branch(new_process = FALSE)'
+
+      - name: Build pkgdown website
+        if: contains(env.isExtPR, 'true')
+        run: |
+          Rscript -e 'pkgdown::build_site(new_process = FALSE)'
