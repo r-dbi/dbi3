@@ -19,3 +19,4 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Config/Needs/website:r-dbi/dbitemplate

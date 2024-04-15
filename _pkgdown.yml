@@ -1,2 +1,4 @@
 url: https://r-dbi.github.io/dbi3
-
+template:
+  package: dbitemplate
+  bootstrap: 5
