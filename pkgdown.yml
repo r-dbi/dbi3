@@ -1,9 +1,9 @@
-pandoc: 2.7.3
-pkgdown: 2.0.1
+pandoc: 3.1.11
+pkgdown: 2.0.8
 pkgdown_sha: ~
 articles:
   dbi3: dbi3.html
-last_built: 2021-12-16T11:29Z
+last_built: 2024-04-16T11:15Z
 urls:
   reference: https://r-dbi.github.io/dbi3/reference
   article: https://r-dbi.github.io/dbi3/articles
